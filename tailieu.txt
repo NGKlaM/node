@@ -1,0 +1,76 @@
+HTTP procotol
+
+- Giao thức HTTP (Hypertext Transfer Protocol) là 1 quy tắc hoặc cách thức dể trao đổi thông tin trên internet.
+Nó được sử dụng để yêu câuvà chuyển dữ liệu giữa máy tính của bản và máy chủ Web.
+* Định Nghĩa 
+- HTTP là cách máy tính của bạn nói chuyện với máy chủ Web
+để lấy trang web hoặc dữ liệu từ internet. Điều này giống như 1 thông điệp cho máy chủ web và yêu cầu nó gửi 
+lại cho bạn trang web hoặc thông tin bạn muốn xem.
+* Cách Sử dụng
+1. Trình duyệt web của bạn (ví dụ: Chrome hoặc Firefox) gõ URL (địa chỉ web) mà bạn muốn truy cập, chẳng hạn như 
+"https://www.example.com."
+
+2. Trình duyệt sử dụng HTTP để gửi yêu cầu đến máy chủ web tương ứng (ở đây là "www.example.com").
+
+3. Máy chủ web của "www.example.com" nhận yêu cầu và gửi trang web hoặc dữ liệu tương ứng 
+(như trang chủ của trang web "www.example.com") lại cho trình duyệt của bạn.
+
+4. Trình duyệt hiển thị trang web hoặc dữ liệu đó cho bạn để xem và tương tác.
+
+-HTTP là giao thức cơ bản cho việc duyệt web và tải dữ liệu từ internet. Nó giúp bạn truy cập các trang web, xem nội dung trực tuyến, 
+và thực hiện các hoạt động trực tuyến khác một cách dễ dàng.
+
+
+
+HTTP Session    Session = "Phiên làm việc"
+- Một phiên HTTP là một khung làm việc có tính liên tục giữa máy khách và máy chủ qua giao thức HTTP. Trong một phiên HTTP,
+máy chủ có khả năng theo dõi trạng thái của máy khách qua nhiều yêucầu và phản hồi HTTP liên quan đến nhau,
+giúp duy trì trạng thái ứng dụng và tương tác giữa máy khách và máy chủ.
+
+- Trong các ứng dụng web, phiên HTTP thường được sử dụng để theo dõi thông tin người dùng, như đăng nhập, giỏ hàng mua sắm, 
+trạng thái đăng nhập và các hoạt động khác.Điều này cho phép ứng dụng duy trì liên kết và trạng thái của người dùng trong suốt quá trình tương tác với trang web.
+
+
+
+
+HTTP Authentication      Authentication = "xác thực"
+
+* Định Nghĩa
+-Xác thực HTTPS (HTTPS Authentication) là một quá trình trong việc thiết lập kết nối an toàn qua giao thức HTTPS 
+(Hypertext Transfer Protocol Secure) trên internet. Nó bao gồm việc xác minh danh tính của máy chủ và, tùy chọn,
+của máy khách để đảm bảo tính bí mật và tính toàn vẹn của dữ liệu truyền qua mạng. Dưới đây là cách sử dụng và
+ý nghĩa của xác thực HTTPS:Xác thực Máy Chủ (Server Authentication):
+
+Quá trình: Khi một máy khách (ví dụ: trình duyệt web) kết nối đến một máy chủ thông qua HTTPS, máy chủ sẽ gửi 
+chứng chỉ số hóa (SSL/TLS certificate) của nó cho máy khách trong quá trình bắt tay ban đầu (handshake).
+Chứng chỉ Máy Chủ (Server Certificate): Chứng chỉ máy chủ chứa thông tin về máy chủ, bao gồm khóa công khai
+ của máy chủ và chữ ký số (digital signature) được ký bởi một đơn vị cấp chứng chỉ (Certificate Authority - CA).
+Xác thực Máy Chủ: Máy khách kiểm tra xem chứng chỉ của máy chủ có được ký bởi một CA đáng tin cậy hay không.
+ Nếu chứng chỉ hợp lệ, máy khách tin tưởng máy chủ và kết nối được thiết lập an toàn.
+Ý nghĩa: Xác thực máy chủ đảm bảo rằng máy chủ mà máy khách đang kết nối với đúng là máy chủ mà nó tuyên bố là.
+ Điều này ngăn chặn tấn công từ người giả mạo và đảm bảo tính bí mật và toàn vẹn của dữ liệu gửi giữa máy khách và máy chủ.
+
+Xác thực Máy Khách (Client Authentication) - Tùy chọn:
+
+Quá trình: Xác thực máy khách là tùy chọn và ít được sử dụng. Trong trường hợp cần thiết, máy khách cung cấp chứng chỉ số hóa
+ của riêng mình để máy chủ kiểm tra.
+Chứng chỉ Máy Khách (Client Certificate): Chứng chỉ máy khách chứa thông tin về máy khách và có thể được cấp bởi một CA 
+hoặc tự ký (self-signed).
+Xác thực Máy Khách: Máy chủ kiểm tra xem chứng chỉ máy khách có hợp lệ hay không. Nếu hợp lệ, máy khách được xác thực và 
+quyền truy cập đối với dịch vụ hoặc tài nguyên được cung cấp.
+Ý nghĩa: Xác thực máy khách đảm bảo rằng máy khách là người dùng được ủy quyền và đang tham gia vào phiên trao đổi dữ liệu.
+ Điều này có thể áp dụng cho các tình huống yêu cầu xác thực mạnh của máy khách, ví dụ như truy cập vào hệ thống dựa trên 
+ chứng chỉ số hóa.
+
+
+Sử dụng xác thực HTTPS quan trọng để đảm bảo tính bảo mật và đáng tin cậy trong giao tiếp trực tuyến, đặc biệt trong việc bảo
+vệ thông tin nhạy cảm như thông tin đăng nhập, dữ liệu cá nhân và giao dịch tài chính.
+
+
+
+
+
+
+
+
+HTTP Request methods
